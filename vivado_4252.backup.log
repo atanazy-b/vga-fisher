@@ -1,0 +1,918 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 15 14:22:16 2018
+# Process ID: 4252
+# Current directory: C:/Users/Sony/Desktop/vga_ps2/vga_ps2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5596 C:\Users\Sony\Desktop\vga_ps2\vga_ps2\vga_ps2.xpr
+# Log file: C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vivado.log
+# Journal file: C:/Users/Sony/Desktop/vga_ps2/vga_ps2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 701.602 ; gain = 39.602
+add_files -norecurse {C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {C:/Users/Sony/Desktop/vga_ps2/vga_ps2/tiff_writer.v C:/Users/Sony/Desktop/vga_ps2/vga_ps2/testbench.v}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+add_files -norecurse C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v
+update_compile_order -fileset sources_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.4 -module_name clk_wiz_0 -dir c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip
+set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLK_OUT1_PORT {clk100MHz} CONFIG.CLK_OUT2_PORT {clk40MHz} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {40.000} CONFIG.USE_SAFE_CLOCK_STARTUP {true} CONFIG.CLKOUT1_DRIVES {BUFGCE} CONFIG.CLKOUT2_DRIVES {BUFGCE} CONFIG.CLKOUT3_DRIVES {BUFGCE} CONFIG.CLKOUT4_DRIVES {BUFGCE} CONFIG.CLKOUT5_DRIVES {BUFGCE} CONFIG.CLKOUT6_DRIVES {BUFGCE} CONFIG.CLKOUT7_DRIVES {BUFGCE} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT1_DIVIDE {25} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {159.371} CONFIG.CLKOUT2_PHASE_ERROR {98.575}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 941.637 ; gain = 2.148
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs  clk_wiz_0_synth_1
+[Mon Mar 19 10:10:05 2018] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.ip_user_files -ipstatic_source_dir C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.cache/compile_simlib/modelsim} {questa=C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.cache/compile_simlib/questa} {riviera=C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.cache/compile_simlib/riviera} {activehdl=C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: vga_example
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1077.723 ; gain = 84.430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:35]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:35]
+ERROR: [Synth 8-439] module 'clk_wiz_0' not found [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:38]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1117.863 ; gain = 124.570
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: vga_example
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1117.863 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:35]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:35]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 2 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:38]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 60 - type: integer 
+	Parameter y_pos bound to: 360 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-256] done synthesizing module 'vga_example' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1119.727 ; gain = 1.863
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1119.727 ; gain = 1.863
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Finished Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1343.496 ; gain = 225.633
+25 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:58 . Memory (MB): peak = 1343.496 ; gain = 225.633
+reorder_files -fileset constrs_1 -after C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc:58]
+Finished Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/vga_example_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1381.129 ; gain = 36.047
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.129 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 60 - type: integer 
+	Parameter y_pos bound to: 360 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+WARNING: [Synth 8-350] instance 'my_drawrect' of module 'draw_rect' requires 17 connections, but only 15 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:155]
+ERROR: [Synth 8-439] module 'MouseCtl' not found [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1396.820 ; gain = 15.691
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1396.820 ; gain = 15.691
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1401.836 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 60 - type: integer 
+	Parameter y_pos bound to: 360 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+WARNING: [Synth 8-350] instance 'my_drawrect' of module 'draw_rect' requires 17 connections, but only 15 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:155]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+INFO: [Synth 8-256] done synthesizing module 'vga_example' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[0]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.828 ; gain = 5.992
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:rst to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[11] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[10] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[9] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[8] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[7] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[6] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[5] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[4] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[3] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[2] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[1] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[0] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setx to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:sety to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_x to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_y to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:177]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.828 ; gain = 5.992
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Finished Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:32 . Memory (MB): peak = 1430.727 ; gain = 31.691
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1430.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 60 - type: integer 
+	Parameter y_pos bound to: 360 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+INFO: [Synth 8-256] done synthesizing module 'vga_example' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[0]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1430.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:rst to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[11] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[10] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[9] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[8] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[7] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[6] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[5] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[4] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[3] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[2] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[1] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[0] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setx to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:sety to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_x to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_y to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1430.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Finished Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:32 . Memory (MB): peak = 1460.605 ; gain = 29.879
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 60 - type: integer 
+	Parameter y_pos bound to: 360 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:180]
+ERROR: [Synth 8-439] module 'MouseDisplay' not found [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:195]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 0 - type: integer 
+	Parameter y_pos bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+WARNING: [Synth 8-614] signal 'ypos' is read in the process but is not in the sensitivity list [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+ERROR: [Synth 8-448] named port connection 'rgb_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:196]
+ERROR: [Synth 8-448] named port connection 'vcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:197]
+ERROR: [Synth 8-448] named port connection 'hcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:200]
+ERROR: [Synth 8-448] named port connection 'rgb_out' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:204]
+WARNING: [Synth 8-350] instance 'MouseDisplay' of module 'MouseDisplay' requires 21 connections, but only 8 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1460.605 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1460.605 ; gain = 0.000
+INFO: [Common 17-344] 'refresh_design' was cancelled
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 0 - type: integer 
+	Parameter y_pos bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+WARNING: [Synth 8-614] signal 'ypos' is read in the process but is not in the sensitivity list [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+ERROR: [Synth 8-448] named port connection 'rgb_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:196]
+ERROR: [Synth 8-448] named port connection 'vcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:197]
+ERROR: [Synth 8-448] named port connection 'hcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:200]
+WARNING: [Synth 8-689] width (12) of port connection 'red_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:204]
+WARNING: [Synth 8-689] width (12) of port connection 'green_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:205]
+WARNING: [Synth 8-689] width (12) of port connection 'blue_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:206]
+WARNING: [Synth 8-350] instance 'MouseDisplay' of module 'MouseDisplay' requires 21 connections, but only 11 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1460.605 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 0 - type: integer 
+	Parameter y_pos bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+WARNING: [Synth 8-614] signal 'ypos' is read in the process but is not in the sensitivity list [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+ERROR: [Synth 8-448] named port connection 'vcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:199]
+ERROR: [Synth 8-448] named port connection 'hcount_in' does not exist for instance 'MouseDisplay' of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:202]
+WARNING: [Synth 8-689] width (12) of port connection 'red_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:206]
+WARNING: [Synth 8-689] width (12) of port connection 'green_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:207]
+WARNING: [Synth 8-689] width (12) of port connection 'blue_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:208]
+WARNING: [Synth 8-350] instance 'MouseDisplay' of module 'MouseDisplay' requires 21 connections, but only 14 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:37]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/.Xil/Vivado-4252-Sony-PC/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'clk_wiz_0' requires 5 connections, but only 3 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:40]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+	Parameter VCOUNT_MIN bound to: 0 - type: integer 
+	Parameter VCOUNT_MAX bound to: 627 - type: integer 
+	Parameter HCOUNT_MIN bound to: 0 - type: integer 
+	Parameter HCOUNT_MAX bound to: 1055 - type: integer 
+	Parameter VSYNC_ON bound to: 601 - type: integer 
+	Parameter VSYNC_OFF bound to: 605 - type: integer 
+	Parameter HSYNC_ON bound to: 840 - type: integer 
+	Parameter HSYNC_OFF bound to: 968 - type: integer 
+	Parameter VBLNK_ON bound to: 600 - type: integer 
+	Parameter HBLNK_ON bound to: 800 - type: integer 
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (3#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_timing.v:14]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (4#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+	Parameter rect_width bound to: 60 - type: integer 
+	Parameter rect_length bound to: 90 - type: integer 
+	Parameter rect_colour bound to: 315 - type: integer 
+	Parameter x_pos bound to: 0 - type: integer 
+	Parameter y_pos bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (5#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/draw_rect.v:3]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
+	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
+	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (6#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/Ps2Interface.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:450]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:456]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:514]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:520]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (7#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseCtl.vhd:207]
+WARNING: [Synth 8-350] instance 'MouseCtl' of module 'MouseCtl' requires 16 connections, but only 5 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+WARNING: [Synth 8-614] signal 'ypos' is read in the process but is not in the sensitivity list [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (8#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/MouseDisplay.vhd:140]
+WARNING: [Synth 8-689] width (11) of port connection 'vcount' does not match port width (12) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:199]
+WARNING: [Synth 8-689] width (11) of port connection 'hcount' does not match port width (12) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:202]
+WARNING: [Synth 8-689] width (12) of port connection 'red_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:206]
+WARNING: [Synth 8-689] width (12) of port connection 'green_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:207]
+WARNING: [Synth 8-689] width (12) of port connection 'blue_out' does not match port width (4) of module 'MouseDisplay' [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:208]
+WARNING: [Synth 8-350] instance 'MouseDisplay' of module 'MouseDisplay' requires 21 connections, but only 16 given [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+INFO: [Synth 8-256] done synthesizing module 'vga_example' (9#1) [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:13]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port xpos[0]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[11]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[10]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[9]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[8]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[7]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[6]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[5]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[4]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[3]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[2]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[1]
+WARNING: [Synth 8-3331] design draw_rect has unconnected port ypos[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:rst to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[11] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[10] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[9] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[8] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[7] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[6] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[5] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[4] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[3] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[2] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[1] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:value[0] to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setx to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:sety to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_x to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseCtl:setmax_y to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:178]
+WARNING: [Synth 8-3295] tying undriven pin MouseDisplay:pixel_clk to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+WARNING: [Synth 8-3295] tying undriven pin MouseDisplay:blank to constant 0 [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.v:193]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1460.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Finished Parsing XDC File [C:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_example.xdc]
+Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Sony/Desktop/vga_ps2/vga_ps2/vga_ps2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 1494.230 ; gain = 33.625
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 19 12:12:08 2018...
